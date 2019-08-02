@@ -61,7 +61,7 @@
     "@angular/platform-browser-dynamic": "^8.1.2",
     "@angular/platform-server": "^8.1.2",
     "@angular/router": "^8.1.2",
-    "@beyerleinf/ngx-dnd": "^8.0.2",
+    "@beyerleinf/ngx-dnd": "8.0.2",
     "@clr/angular": "^2.0.2",
     "@clr/icons": "^2.0.2",
     "@clr/ui": "^2.0.2",
