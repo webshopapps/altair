@@ -64,7 +64,7 @@
     "@angular/router": "^8.1.2",
     "@beyerleinf/ngx-dnd": "^8.0.2",
     "@clr/angular": "^2.0.2",
-    "@clr/icons": "^2.0.2",
+    "@clr/icons": "2.1.0",
     "@clr/ui": "^2.0.2",
     "@ctrl/ngx-codemirror": "^2.0.0",
     "@ngrx/effects": "^8.1.0",
