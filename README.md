@@ -31,6 +31,15 @@
 
 <hr>
 
+## Deploying to ShipperHQ Playground Site
+The playground site is located on our test AWS accounts S3 bucket.
+
+To deploy, you will need to run `yarn build` from the root directory of this repository. That will generate the dist folder.
+
+Copy the contents of the dist folder to the folder in the S3 bucket called graphiql-dev.shipperhq.com
+
+That completes the steps required to deploy any updates
+
 [![Donate to Altair](https://opencollective.com/altair/donate/button.png?color=blue)](https://opencollective.com/altair/donate)
 
 </div>

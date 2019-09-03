@@ -28,6 +28,90 @@
     if (/altair-gql.sirmuel.design/.test(location.host)) {
       window.__ALTAIR_WEB_APP__ = 1;
     }
+
+    window.__ALTAIR_SUBSCRIPTIONS_ENDPOINT__ = 'https://api.shipperhq.com/v2/graphql';
+    window.__ALTAIR_INITIAL_QUERY__ = '\n' +
+            'query RetrieveShippingQuote($ratingInfo: RatingInfoInput!) {\n' +
+            '  retrieveShippingQuote(ratingInfo: $ratingInfo){\n' +
+            '    transactionId\n' +
+            '    carriers {\n' +
+            '      carrierCode\n' +
+            '      carrierTitle\n' +
+            '      carrierType\n' +
+            '      error {\n' +
+            '        errorCode\n' +
+            '        internalErrorMessage\n' +
+            '        externalErrorMessage\n' +
+            '        priority\n' +
+            '      }\n' +
+            '      shippingRates {\n' +
+            '        code\n' +
+            '        title\n' +
+            '        totalCharges\n' +
+            '      }\n' +
+            '    }\n' +
+            '    errors {\n' +
+            '      errorCode\n' +
+            '      internalErrorMessage\n' +
+            '      externalErrorMessage\n' +
+            '      priority\n' +
+            '    }\n' +
+            '  }\n' +
+            '}';
+    window.__ALTAIR_INITIAL_VARIABLES__ = '{\n' +
+            '  "ratingInfo": {\n' +
+            '    "cart": {\n' +
+            '      "items": [{\n' +
+            '        "itemId": "57",\n' +
+            '        "sku": "25-MB01",\n' +
+            '        "storePrice": 34,\n' +
+            '        "weight": 1,\n' +
+            '        "qty": 1,\n' +
+            '        "type": "SIMPLE",\n' +
+            '        "basePrice": 34,\n' +
+            '        "taxInclBasePrice": null,\n' +
+            '        "taxInclStorePrice": 34,\n' +
+            '        "discountPercent": null,\n' +
+            '        "discountedBasePrice": null,\n' +
+            '        "discountedStorePrice": null,\n' +
+            '        "discountedTaxInclBasePrice": null,\n' +
+            '        "discountedTaxInclStorePrice": null,\n' +
+            '        "attributes": [{\n' +
+            '          "name": "shipperhq_warehouse",\n' +
+            '          "value": "CA Origin#NY Origin"\n' +
+            '        }],\n' +
+            '        "items": null\n' +
+            '      }],\n' +
+            '      "declaredValue": 34\n' +
+            '    },\n' +
+            '    "destination": {\n' +
+            '      "country": "US",\n' +
+            '      "region": "TX",\n' +
+            '      "city": "Austin",\n' +
+            '      "street": "5701 S MoPac Expy",\n' +
+            '      "street2": "#1821",\n' +
+            '      "zipcode": "78749"\n' +
+            '    },\n' +
+            '    "customer": {\n' +
+            '      "customerGroup": "NOT LOGGED IN"\n' +
+            '    },\n' +
+            '    "cartType": "STD",\n' +
+            '    "requestedOptions": null,\n' +
+            '    "siteDetails": {\n' +
+            '      "appVersion": "1.0.0",\n' +
+            '      "ecommerceCart": "Magento 2 Community",\n' +
+            '      "ecommerceVersion": "2.3.1",\n' +
+            '      "websiteUrl": "http://www.example.com",\n' +
+            '      "ipAddress": "12.34.567"\n' +
+            '    }\n' +
+            '  }\n' +
+            '}';
+    headersArr = [];
+    headersArr['X-ShipperHQ-Access-Token'] = 'df5e8fb2d9a8b87d8adfd4f8fa229192'; //TODO set to placeholder
+    headersArr['X-ShipperHQ-Scope'] = 'LIVE';
+    headersArr['X-ShipperHQ-Session'] = '1234';
+    window.__ALTAIR_INITIAL_HEADERS__ = headersArr;
+
   </script>
   <app-root>
     <style>
