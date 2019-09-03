@@ -5,7 +5,7 @@
 <div class="app-window__content">
   <div class="window-loader" [ngClass]="{ 'window-loader--show': isLoading$ | async }">
     <div class="window-loader__content">
-      <img src="assets/img/logo.svg" alt="" class="anim anim-rotate"> {{ 'LOADING_INDICATOR_TEXT' | translate }}
+      <img src="assets/img/LoadSpinner.png" alt="" class="anim anim-rotate"> {{ 'LOADING_INDICATOR_TEXT' | translate }}
       <div class="window-loader__actions">
         <button class="app-button cancel-request-button" (click)="cancelRequest()" track-id="cancel_request">{{ 'CANCEL_TEXT' | translate }}</button>
       </div>
